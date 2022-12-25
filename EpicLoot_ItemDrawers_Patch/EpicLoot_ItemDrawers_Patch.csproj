@@ -31,9 +31,6 @@
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
-    <PropertyGroup>
-      <PostBuildEvent>xcopy "C:\Projects\EpicLoot_ItemDrawers_Patch\EpicLoot_ItemDrawers_Patch\bin\Debug\EpicLoot_ItemDrawers_Patch.dll" "C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins" /y</PostBuildEvent>
-    </PropertyGroup>
     <ItemGroup>
         <Reference Include="0Harmony">
           <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\core\0Harmony.dll</HintPath>
@@ -82,8 +79,9 @@
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
     </Target>
-    <Target Name="AfterBuild">
-    </Target>
     -->
+    <Target Name="AfterBuild">
+        <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\plugins&quot; /y"/>
+    </Target>
 
 </Project>
