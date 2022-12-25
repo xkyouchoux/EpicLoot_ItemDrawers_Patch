@@ -1,0 +1,10 @@
+{
+    "name": "EpicLoot_ItemDrawers_Visual_Patch",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/xkyouchoux/EpicLoot_ItemDrawers_Patch",
+    "description": "A visual patch to fix epic loot materials in item drawers.",
+    "dependencies": [
+        "RandyKnapp-EpicLoot-0.9.2",
+        "makail-ItemDrawers-0.5.0"
+    ]
+}
